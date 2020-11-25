@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用Spring来创建对象,在Spring这些都称为Bean
+          bean-对象
+          id - 变量名
+          class - 对象类型
+          property - 对象的成员变量
+    -->
+    <bean id="mysqlImpl" class="com.xiyou3g.dao.UserDaoMysqlImpl"></bean>
+
+    <bean id="daoImpl" class="com.xiyou3g.dao.UserDaoImpl"></bean>
+
+    <bean id="UserServiceImpl" class="com.xiyou3g.service.UserServiceImpl">
+        <!--
+        value:赋值为基本数据类型
+        ref: 引用Spring中已经创建好的对象
+        -->
+      <property name="userDao" ref="mysqlImpl">
+
+      </property>
+    </bean>
+
+</beans>

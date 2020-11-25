@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="Address" class="com.xiyou3g.pojo.Address">
+        <property name="address">
+            <value>西北大学家属区17栋1001</value>
+        </property>
+    </bean>
+
+
+
+    <bean id="Student" class="com.xiyou3g.pojo.Student">
+        <!--  普通值注入-value  -->
+        <property name="name" value="李碧琪"/>
+
+        <!-- Bean注入-ref  -->
+        <property name="address" ref="Address"/>
+
+        <!-- 数组 -->
+        <property name="books">
+            <array>
+                <value>《算法》</value>
+                <value>《java从入门到精通》</value>
+                <value>《数据结构》</value>
+                <value>《孙子兵法》</value>
+            </array>
+        </property>
+
+        <!-- List -->
+        <property name="hobbies">
+            <list>
+                <value>敲代码</value>
+                <value>玩刀</value>
+                <value>看番</value>
+            </list>
+        </property>
+
+       <!-- Map -->
+        <property name="grade">
+            <map>
+                <entry key="语文" value="120"/>
+                <entry key="数学" value="116"/>
+                <entry key="英语" value="117"/>
+                <entry key="理综" value="178"/>
+            </map>
+        </property>
+
+        <!-- Set -->
+        <property name="friends">
+            <set>
+                <value>PQS</value>
+                <value>MY</value>
+                <value>ZPY</value>
+            </set>
+        </property>
+
+        <!-- null -->
+        <property name="girlfriend">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="driver">03191109</prop>
+                <prop key="url">男</prop>
+                <prop key="username">root</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

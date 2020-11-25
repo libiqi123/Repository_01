@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+    执行对象的无参构造
+    <bean id="User" class="com.xiyou3g.pojo.User">
+       <property name="name" value="李碧琪"/>
+    </bean>
+
+ -->
+
+    <!--
+    使用参数索引表下标执行对象有参构造
+      <bean id="User" class="com.xiyou3g.pojo.User">
+          <constructor-arg index="0" value="李碧琪"/>
+      </bean>
+ -->
+
+<!--
+    使用参数类型匹配执行对象有参构造
+    <bean id="User" class="com.xiyou3g.pojo.User">
+        <constructor-arg type="java.lang.String" value="李碧琪"/>
+    </bean>
+-->
+
+    <!--使用参数名称匹配执行对象有参构造 -->
+    <bean id="User2" class="com.xiyou3g.pojo.User" name="user2">
+
+        <constructor-arg name="id" value="3191108"/>
+        <constructor-arg name="name" value="李碧碧"/>
+        <constructor-arg name="age" value="19"/>
+     </bean>
+<bean id="UserT2" class="com.xiyou3g.pojo.UserT">
+<property name="name" value="李四"/>
+</bean>
+
+</beans>
