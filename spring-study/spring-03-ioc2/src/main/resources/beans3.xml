@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="User3" class="com.xiyou3g.pojo.User" name="user3">
+    <bean id="User3" class="com.xiyou3g.pojo.Stu" name="user3">
 
         <constructor-arg name="id" value="3191107"/>
         <constructor-arg name="name" value="张琪琪"/>
